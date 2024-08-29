@@ -45,6 +45,10 @@ public class Main {
         }
         System.out.println();
 
-        
+        listaDePersonas.sort((p1, p2) -> p2.getApellido().compareTo(p1.getApellido()));
+        System.out.println("*** LISTADO ORDENADO INVERSAMENTE POR APELLIDOS ***");
+        for (Persona persona : listaDePersonas ) {
+            System.out.println(persona.getApellido() + " " + persona.getNombre());
+        }
     }
 }
