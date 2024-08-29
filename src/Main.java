@@ -32,10 +32,19 @@ public class Main {
         listaDePersonas.add(persona5);
 
         listaDePersonas.sort((p1, p2) -> p1.getNombre().compareTo(p2.getNombre()));
-
+        System.out.println("*** LISTADO ORDENADO POR NOMBRES ***");
         for (Persona  persona: listaDePersonas) {
             System.out.println(persona.getNombre() + " " + persona.getApellido());
         }
+        System.out.println();
 
+        listaDePersonas.sort((p1, p2) -> p1.getApellido().compareTo(p2.getApellido()));
+        System.out.println("*** LISTADO ORDENADO POR APELLIDOS ***");
+        for (Persona persona : listaDePersonas ) {
+            System.out.println(persona.getApellido() + " " + persona.getNombre());
+        }
+        System.out.println();
+
+        
     }
 }
